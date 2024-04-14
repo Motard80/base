@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+    RewriteRule ^([^/]+)$ view/$1.php [L]
+    RewriteRule ^$ index [L]
+</IfModule>
