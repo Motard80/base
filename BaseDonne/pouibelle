@@ -1,0 +1,65 @@
+
+   /*     
+   $newLocation = "?p=SendMail";
+    header("Location: $newLocation", true, 301);
+$AddName=htmlspecialchars($_POST['Name']);
+$AddMember->setName($AddName);
+    // Adresse email du destinataire
+$destinataire = 'destinataire@example.com';
+
+// Sujet de l'email
+$sujet = 'Validation de compte';
+
+// Génération du lien de validation (pourrait être plus complexe dans un cas réel)
+$lien_validation = 'https://votresite.com/validation.php?time=$date_heure_format';
+
+// Corps de l'email avec le lien de validation
+$message = 'Veuillez cliquer sur le lien suivant pour valider votre compte : <a href="'.$lien_validation.'">Valider mon compte</a>';
+
+// En-têtes de l'email
+$headers = "From: votre_adresse@example.com\r\n";
+$headers .= "Reply-To: votre_adresse@example.com\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+// Envoi de l'email
+if (mail($destinataire, $sujet, $message, $headers)) {
+    echo 'Email envoyé avec succès.';
+} else {
+    echo 'Erreur lors de l\'envoi de l\'email.';
+}*/
+
+/*
+$AddAccountValidated=5;
+$AddMember->setAccountValidated($AddAccountValidated);
+$AddAccesId= 252;
+$AddMember->setAccesId($AddAccesId);*/
+/*$mail = $_GET['mail'];
+        $Verif = MemberModel::showAll();
+        foreach ($Verif as $data) {
+            if ($mail === $data['mail']) {
+                $VerifId = $data['Id'];
+                $Url2 = "http://localhost/Cyber/public/?p=registration";
+                $ModfiValideAccount = 301;
+                $MdofiMember = new MemberModel();
+               // $VerifUdpdateMember = $MdofiMember->setAccountValidated($MdofiMember);
+              //  $CheckUpdateMember = $VerifUdpdateMember->update($VerifId);
+              $CheckUpdateMember= true;
+                if ($CheckUpdateMember === true) {
+                    if ($result) {
+                        $title = 'Compte validé';
+                        $CompteValide = "Votre compte est validé. Vous pouvez vous connecter <a href=\"http://localhost/Cyber/public/?p=connexion\">Connexion</a>";
+                    } else {
+                        $title = 'Délais expirais';
+                        $CompteValide = "Le délai est passé. Merci de contacter le webMaster qui vous indiquera la marche à suivre.";
+                    }
+                } else {
+                    $Error = "";
+                }
+                // Afficher le message en fonction du résultat
+                break;
+            } else {
+                $title = 'Compte introuvable';
+                $Error = '<img src="../../../public/asset/img/WarningRond.png" style="width: 50px;" class="images_petit" />'
+                    . 'Votre adresse mail n\'est pas enregistrer veuillez vous incscrire en cliquant sur le liens suivant:<a href=\"http://localhost/Cyber/public/?p=registration\">Connexion</a>';
+            }
+        }*/

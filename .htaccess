@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^http:\/\/localhost\/Cyber [NC]
+    RewriteRule ^(.*)$ http://localhost/Cyber$1 [L,R=301]
+    
+</IfModule>
